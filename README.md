@@ -12,3 +12,7 @@
 ## Authors
 
 - [@QuickPurpleFox](https://github.com/QuickPurpleFox) | Daniel K
+
+
+supported by
+![alt text](https://naft.space/wordpress/wp-content/uploads/2022/10/JLCPCB-logo.png)
