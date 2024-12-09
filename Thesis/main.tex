@@ -1,0 +1,67 @@
+\documentclass[11pt]{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{titling}
+\usepackage{geometry}
+\usepackage{ulem}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[style=numeric, sorting=none]{biblatex} % Styl numeryczny
+\addbibresource{bibliografia.bib}
+\usepackage[polish]{babel}
+\AddToHook{cmd/section/before}{\clearpage}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{listings}
+
+
+% Styl rozdziału
+\titleformat{\chapter}[block]
+  {\normalfont\huge\bfseries} % Duża czcionka dla tytułu
+  {\thechapter.} % Formatowanie numeru rozdziału
+  {20pt} % Odstęp między numerem a tytułem
+  {}
+
+% Dodatkowe modyfikacje odstępów po tytule
+\titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+
+% Ustawienia marginesów
+\newgeometry{a4paper, tmargin=2.5cm, bmargin=2.5cm, lmargin=2.5cm, rmargin=2.5cm}
+
+% Zwiększenie odstępów między liniami
+\linespread{1.3}
+
+\begin{document}
+
+% Logo oraz nagłówek strony tytułowej
+\posttitle{\\\includegraphics[width=7cm]{LogoPolitechnikaMorskaWIiT.png}}
+
+% Tytuł pracy
+\title{\textbf{POLITECHNIKA MORSKA W SZCZECINIE\\
+WYDZIAŁ INFORMATYKI I TELEKOMUNIKACJI}}
+\author{\Large{Daniel Kropopek \\[1cm] 
+\textbf{Projekt oraz wykonanie komputera 8-bitowego opartego o procesor MOS 6502} \\[0.5cm]
+\textit{Design and creation of an 8-bit computer based on the MOS 6502 processor}}}
+
+% Data
+\date{Szczecin 2024}
+
+% Tworzenie strony tytułowej
+\maketitle
+
+% Wstawianie plików i sekcji
+\include{Oświadczenie}
+
+% Spis treści
+\tableofcontents
+
+% Kolejne sekcje
+\include{Wstęp}
+\begingroup
+\let\clearpage\relax
+\include{ZarysProblematyki}
+\endgroup
+\include{AnalizaUkładów}
+\listoftables
+\printbibliography
+
+\end{document}
